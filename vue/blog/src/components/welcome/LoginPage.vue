@@ -57,8 +57,7 @@ const login = () => {
     } else {
         post('/api/auth/login', {
             username: form.username,
-            password: form.password,
-            remember: form.remember
+            password: form.password
         }, (message) => {
             ElMessage.success(message)
             get('/api/user/me', (message) => {
